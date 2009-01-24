@@ -1,0 +1,39 @@
+# ccache
+export CCACHE_DIR="/var/cache/pbuilder/ccache"
+export PATH="/usr/lib/ccache:${PATH}"
+
+EXTRAPACKAGES="ccache gpgv"
+BINDMOUNTS="${CCACHE_DIR}"
+
+# multiple pbuilder support
+[ -z $DIST ] && DIST=intrepid
+case "$DIST" in
+	hardy|intrepid) # ubuntu specific
+		MIRRORSITE="http://archive.ubuntu.com/ubuntu/"
+		COMPONENTS="main restricted universe multiverse"
+	;;
+	etch|lenny|sid) # debian specific
+		MIRRORSITE="http://archive.debian.org/debian/"
+		COMPONENTS="main contrib non-free"
+	;;
+	*)
+		echo "Unknown distribution: $DIST"
+		exit 1;
+	;;
+esac
+
+OTHERMIRROR="deb http://ppa.launchpad.net/holy.cheater/ubuntu $DIST main"
+
+DISTRIBUTION="$DIST"
+BASETGZ="/var/cache/pbuilder/$DIST/base.tgz"
+BUILDRESULT="/var/cache/pbuilder/$DIST/result/"
+APTCACHE="/var/cache/pbuilder/$DIST/aptcache/"
+DEBOOTSTRAPOPTS=("--variant=buildd" "${DEBOOTSTRAPOPTS[@]}")
+
+echo "==============================================================="
+echo "Distribution: $DIST"
+echo "Base.tgz:     $BASETGZ"
+echo "Build result: $BUILDRESULT"
+echo "APT cache:    $APTCACHE"
+echo "==============================================================="
+
