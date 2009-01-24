@@ -16,8 +16,14 @@ endif
 
 set hlsearch
 
-set guifont=Monaco:h11
-set lines=50
+if has("gui_gtk")
+	set guifont=Droid\ Sans\ Mono\ 9
+	set lines=35
+else
+	set guifont=Monaco:h11
+	set lines=50
+endif
+
 set columns=80
 
 "set guitablabel=%t
