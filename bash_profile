@@ -14,5 +14,8 @@ fi
 
 export EDITOR="/usr/bin/vim"
 
-alias ls="gls --color=auto"
-alias la="ls -la"
+# coreutils from macports
+if [ -f /opt/local/bin/gls ]; then
+	alias ls="gls --color=auto"
+	alias la="ls -la"
+fi
