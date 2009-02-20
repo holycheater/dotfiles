@@ -14,16 +14,15 @@ if !exists("syntax_on")
 	syntax on
 endif
 
-set hlsearch
-
 if has("gui_gtk")
 	set guifont=Droid\ Sans\ Mono\ 9
 	set lines=35
 else
-	set guifont=Monaco:h11
+	set guifont=Monaco:h12
 	set lines=50
 endif
 
 set columns=80
 
+colorscheme ir_dark
 "set guitablabel=%t
