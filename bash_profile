@@ -23,3 +23,7 @@ if [ -f /opt/local/bin/gls ]; then
 	alias ls="gls --color=auto"
 	alias la="ls -la"
 fi
+
+if [ -x /opt/local/bin/gdircolors ]; then
+	eval `gdircolors .dircolors`
+fi
