@@ -27,3 +27,8 @@ fi
 if [ -x /opt/local/bin/gdircolors ]; then
 	eval `gdircolors .dircolors`
 fi
+
+# Enable 256-color for iTerm.app
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+	export TERM="xterm-256color"
+fi
