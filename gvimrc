@@ -17,12 +17,12 @@ endif
 if has("gui_gtk")
 	set guifont=Droid\ Sans\ Mono\ 9
 	set lines=35
-else
+endif
+if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
-	set lines=50
+	set lines=45
 endif
 
 set columns=80
 
 colorscheme ir_dark
-"set guitablabel=%t
