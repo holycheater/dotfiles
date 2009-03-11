@@ -12,7 +12,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
 	. /opt/local/etc/bash_completion
 fi
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="$HOME/.bin/vim"
 
 if [ -d ~/.bin ]; then
 	export PATH=$HOME/.bin:$PATH
