@@ -16,13 +16,14 @@ endif
 
 if has("gui_gtk")
 	set guifont=Droid\ Sans\ Mono\ 9
-	set lines=35
+	win 80 35
 endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
-	set lines=45
+	win 80 45
 endif
 
-set columns=80
-
 colorscheme ir_dark
+
+" disable the bell
+set vb t_vb=
