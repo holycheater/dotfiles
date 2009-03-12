@@ -31,4 +31,5 @@ fi
 # Enable 256-color for iTerm.app
 if [ $TERM_PROGRAM = "iTerm.app" ]; then
 	export TERM="xterm-256color"
+	export LANG="en_US.UTF-8"
 fi
