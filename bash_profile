@@ -33,3 +33,5 @@ if [ $TERM_PROGRAM = "iTerm.app" ]; then
 	export TERM="xterm-256color"
 	export LANG="en_US.UTF-8"
 fi
+
+[ -x /opt/local/bin/lesspipe.sh ] && eval `lesspipe.sh`
