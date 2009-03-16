@@ -21,6 +21,7 @@ endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
 	win 80 45
+	set guioptions-=T
 endif
 
 colorscheme ir_dark
