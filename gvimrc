@@ -15,16 +15,17 @@ if !exists("syntax_on")
 endif
 
 if has("gui_gtk")
-	set guifont=Droid\ Sans\ Mono\ 9
+	set guifont=Monaco\ 12
 	win 80 35
+	colorscheme satori
 endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
 	win 80 45
 	set guioptions-=T
+	colorscheme ir_dark
 endif
 
-colorscheme ir_dark
 
 " disable the bell
 set vb t_vb=
