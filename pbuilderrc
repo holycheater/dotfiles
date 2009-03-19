@@ -6,9 +6,9 @@ EXTRAPACKAGES="ccache gpgv"
 BINDMOUNTS="${CCACHE_DIR}"
 
 # multiple pbuilder support
-[ -z $DIST ] && DIST=intrepid
+[ -z $DIST ] && DIST=jaunty
 case "$DIST" in
-	hardy|intrepid) # ubuntu specific
+	hardy|intrepid|jaunty) # ubuntu specific
 		MIRRORSITE="http://archive.ubuntu.com/ubuntu/"
 		COMPONENTS="main restricted universe multiverse"
 	;;
