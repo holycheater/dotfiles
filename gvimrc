@@ -27,5 +27,8 @@ if has("gui_mac") || has("gui_macvim")
 endif
 
 
+map <C-Tab> :tabn<CR>
+map <C-S-Tab> :tabp<CR>
+
 " disable the bell
 set vb t_vb=
