@@ -57,6 +57,8 @@ endif " has("autocmd")
 
 colorscheme ir_black
 
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 
+" disable the bell
+set vb t_vb=
