@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILES="gvimrc vimrc bash_profile dircolors zshrc screenrc"
+FILES="gvimrc vimrc bash_profile dircolors zshrc screenrc Xdefaults"
 
 for f in $FILES; do
 	fullpath="${HOME}/.${f}"
