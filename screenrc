@@ -1,0 +1,10 @@
+startup_message off
+defscrollback 1024
+#termcapinfo xterm ti@:te@
+hardstatus alwayslastline "%{yk}%-w%{gk}[%n %t]%{yk}%+w"
+vbell off
+attrcolor b ".I"
+
+defutf8 on
+
+shell -$SHELL
