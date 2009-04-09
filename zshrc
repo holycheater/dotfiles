@@ -1,32 +1,37 @@
-# The following lines were added by compinstall
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+    export GREP_OPTIONS="--color"
+    export GREP_COLOR="1;32"
+fi
 
 zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle :compinstall filename '/home/holycheater/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-export HISTCONTROL=ignoredups
+HISTCONTROL=ignoredups
+
 unsetopt beep
 bindkey -e
-# End of lines configured by zsh-newuser-install
 
-if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-	export GREP_OPTIONS="--color"
-	export GREP_COLOR="1;32"
-fi
-
-export TERM="xterm-256color"
-export PS1="%~%# "
-export PATH="$HOME/.bin:$PATH"
+TERM="xterm-256color"
+PROMPT="%~%# "
+PATH="$HOME/.bin:$PATH"
 
 export DEBFULLNAME="Alexander Saltykov"
 export DEBEMAIL="holy.cheater@gmail.com"
 
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+case $TERM in
+    xterm*|rxvt)
+    	precmd() { print -Pn "\e]0;%n@%m: %~\a"  }
+	preexec() { print -Pn "\e]0;%n@%m: $1\a" }
+    ;;
+esac
