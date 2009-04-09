@@ -6,7 +6,8 @@ EXTRAPACKAGES="ccache gpgv"
 BINDMOUNTS="${CCACHE_DIR}"
 
 # multiple pbuilder support
-[ -z $DIST ] && DIST=jaunty
+[ -z $DIST ] && DIST=`lsb_release -c | awk '{print $2}'`
+
 case "$DIST" in
 	hardy|intrepid|jaunty) # ubuntu specific
 		MIRRORSITE="http://archive.ubuntu.com/ubuntu/"
