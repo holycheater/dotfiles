@@ -12,9 +12,10 @@ case "$DIST" in
 	hardy|intrepid|jaunty) # ubuntu specific
 		MIRRORSITE="http://archive.ubuntu.com/ubuntu/"
 		COMPONENTS="main restricted universe multiverse"
+		#OTHERMIRROR="deb http://ppa.launchpad.net/holy.cheater/ubuntu $DIST main"
 	;;
 	etch|lenny|sid) # debian specific
-		MIRRORSITE="http://archive.debian.org/debian/"
+		MIRRORSITE="http://http.us.debian.org/debian/"
 		COMPONENTS="main contrib non-free"
 	;;
 	*)
@@ -23,8 +24,7 @@ case "$DIST" in
 	;;
 esac
 
-#OTHERMIRROR="deb http://ppa.launchpad.net/holy.cheater/ubuntu $DIST main"
-
+DISTRIBUTION=$DIST
 PBPREFIX="/var/cache/pbuilder/$DIST"
 BASETGZ="$PBPREFIX/base.tgz"
 BUILDRESULT="$PBPREFIX/result/"
