@@ -6,7 +6,7 @@ EXTRAPACKAGES="ccache gpgv"
 BINDMOUNTS="${CCACHE_DIR}"
 
 # multiple pbuilder support
-[ -z $DIST ] && DIST=`lsb_release -c | awk '{print $2}'`
+[ -z $DIST ] && DIST=`lsb_release -cs`
 
 case "$DIST" in
 	hardy|intrepid|jaunty) # ubuntu specific
@@ -15,7 +15,7 @@ case "$DIST" in
 		#OTHERMIRROR="deb http://ppa.launchpad.net/holy.cheater/ubuntu $DIST main"
 	;;
 	etch|lenny|sid) # debian specific
-		MIRRORSITE="http://http.us.debian.org/debian/"
+		MIRRORSITE="http://http.us.debian.org/debian"
 		COMPONENTS="main contrib non-free"
 	;;
 	*)
@@ -24,6 +24,7 @@ case "$DIST" in
 	;;
 esac
 
+# Options for pbuilder
 DISTRIBUTION=$DIST
 PBPREFIX="/var/cache/pbuilder/$DIST"
 BASETGZ="$PBPREFIX/base.tgz"
@@ -36,9 +37,10 @@ for dir in $CCACHE_DIR $PBPREFIX; do
 done
 
 echo "==============================================================="
-echo "Distribution: $DIST"
+echo "Distribution: $DISTRIBUTION"
 echo "Base.tgz:     $BASETGZ"
 echo "Build result: $BUILDRESULT"
 echo "APT cache:    $APTCACHE"
+echo "Mirror site:  $MIRRORSITE"
 echo "==============================================================="
 
