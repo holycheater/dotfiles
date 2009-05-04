@@ -20,7 +20,6 @@ HISTCONTROL=ignoredups
 unsetopt beep
 bindkey -e
 
-TERM="xterm-256color"
 PROMPT="%~%# "
 PATH="$HOME/.bin:$PATH"
 
@@ -31,7 +30,23 @@ export DEBEMAIL="holy.cheater@gmail.com"
 
 case $TERM in
     xterm*|rxvt)
-    	precmd() { print -Pn "\e]0;%n@%m: %~\a"  }
-	preexec() { print -Pn "\e]0;%n@%m: $1\a" }
+	precmd() {
+	    print -Pn "\e]0;%~\a"
+	}
+	preexec() {
+	    print -Pn "\e]0;$1\a"
+	}
+    ;;
+    screen*)
+	precmd() {
+	    print -Pn "\ek%~\e\\"
+	    print -Pn "\e]0;%~\a"
+	}
+	preexec() {
+	    print -Pn "\ek$1\e\\"
+	    print -Pn "\e]0;$1\a"
+	}
     ;;
 esac
+
+TERM="xterm-256color"
