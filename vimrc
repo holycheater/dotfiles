@@ -59,6 +59,10 @@ colorscheme ir_black
 
 set tabstop=8
 set shiftwidth=4
+set expandtab
+set smarttab
+
+set tabpagemax=30
 
 " disable the bell
 set vb t_vb=
