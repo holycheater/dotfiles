@@ -3,7 +3,7 @@ export CCACHE_DIR="/var/cache/pbuilder/ccache"
 export PATH="/usr/lib/ccache:${PATH}"
 
 # apt-cacher
-export http_proxy="http://127.0.0.1:3142/"
+export http_proxy="http://dragonfly.sol:3142/"
 
 EXTRAPACKAGES="ccache gpgv"
 BINDMOUNTS="${CCACHE_DIR}"
