@@ -25,6 +25,7 @@ if has("gui_mac") || has("gui_macvim")
 	set guioptions-=T
 	colorscheme ir_dark
 endif
+colo ir_dark
 
 
 map <C-Tab> :tabn<CR>
