@@ -1,3 +1,4 @@
+" vim:noet:ts=4:sw=4:
 set ch=2		" Make command line two lines high
 
 set mousehide		" Hide the mouse when typing text
@@ -30,9 +31,7 @@ colo ir_dark
 set guioptions-=T
 set guioptions-=m
 
-nmap <C-M> :set guioptions+=m<CR>
-nmap <C-S-M> :set guioptions-=m<CR>
-
+nmap <C-M> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR>
 
 map <C-Tab> :tabn<CR>
 map <C-S-Tab> :tabp<CR>
