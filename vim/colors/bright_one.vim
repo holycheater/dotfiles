@@ -19,25 +19,25 @@ let colors_name = "bright_one"
 
 " General colors
 hi Normal           guifg=#111111  guibg=#ffffff  gui=NONE
-hi NonText          guifg=#070707  guibg=#ffffff  gui=NONE
+hi NonText          guifg=#777777  guibg=#ffffff  gui=NONE
 
 hi Cursor           guifg=#ffffff  guibg=#000000  gui=NONE
 hi LineNr           guifg=#3d3d3d  guibg=#000000  gui=NONE
 
 hi VertSplit        guifg=#eeeeee  guibg=#aaaaaa  gui=NONE
-hi StatusLine       guifg=#3e9679  guibg=#eeeeee  gui=italic
+hi StatusLine       guifg=#ffffff  guibg=#418dd4  gui=italic
 hi StatusLineNC     guifg=#000000  guibg=#eeeeee  gui=NONE
 
 hi Folded           guifg=#5a646e  guibg=#eeeeee  gui=NONE
 hi Title            guifg=#111111  guibg=NONE     gui=bold
-hi Visual           guifg=NONE     guibg=#eeeeee  gui=NONE
+hi Visual           guifg=#ffffff  guibg=#418dd4  gui=NONE
 
-hi SpecialKey       guifg=#808080  guibg=#343434  gui=NONE
+hi SpecialKey       guifg=#808080  guibg=#eeeeee  gui=NONE
 
 hi WildMenu         guifg=green    guibg=yellow   gui=NONE
 hi PmenuSbar        guifg=black    guibg=white    gui=NONE
 
-hi Error            guifg=NONE     guibg=NONE     gui=undercurl
+hi Error            guifg=NONE     guibg=NONE     gui=undercurl  guisp=#ff0000
 hi ErrorMsg         guifg=white    guibg=#dc2f22  gui=bold
 hi WarningMsg       guifg=white    guibg=#ffb900  gui=bold
 
@@ -113,3 +113,6 @@ hi link htmlEndTag      Identifier
 hi link javaScriptNumber      Number
 
 " Special for PHP
+
+" Special for Vim
+hi link vimHiAttrib Constant
