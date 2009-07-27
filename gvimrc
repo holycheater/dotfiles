@@ -30,6 +30,14 @@ colo ir_dark
 
 map <C-Tab> :tabn<CR>
 map <C-S-Tab> :tabp<CR>
+map <S-Tab> :tabp<CR>
+
+" copy paste
+vmap <C-C> "+y
+nmap <C-V> "+gP
+imap <C-V> <ESC><C-V>i
+vmap <C-X> "+x
+nmap <C-A> <S-G><S-V>gg
 
 " disable the bell
 set vb t_vb=
