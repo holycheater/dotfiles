@@ -93,6 +93,12 @@ hi link SpecialChar     Special
 hi link SpecialComment  Special
 hi link Debug           Special
 
+" Special for diff
+hi DiffText    guifg=#000000  guibg=#ffe49b  gui=NONE
+hi DiffAdd     guifg=NONE     guibg=#ddffdd  gui=NONE
+hi DiffDelete  guifg=#ffdddd  guibg=#ffdddd  gui=NONE
+hi DiffChange  guifg=NONE     guibg=#fff6dd  gui=NONE
+
 " Special for XML
 hi link xmlTag          Identifier
 hi link xmlTagName      Identifier
@@ -102,7 +108,6 @@ hi link xmlEndTag       Identifier
 hi link htmlTag         Identifier
 hi link htmlTagName     Identifier
 hi link htmlEndTag      Identifier
-
 
 " Special for Javascript
 hi link javaScriptNumber      Number
