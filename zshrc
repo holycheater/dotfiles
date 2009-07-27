@@ -50,3 +50,4 @@ case $TERM in
 esac
 
 TERM="xterm-256color"
+export EDITOR="/usr/bin/vim"
