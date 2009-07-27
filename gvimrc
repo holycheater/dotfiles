@@ -22,10 +22,16 @@ endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
 	win 80 45
-	set guioptions-=T
 	colorscheme ir_dark
 endif
 colo ir_dark
+
+" remove toolbar & menu
+set guioptions-=T
+set guioptions-=m
+
+nmap <C-M> :set guioptions+=m<CR>
+nmap <C-S-M> :set guioptions-=m<CR>
 
 
 map <C-Tab> :tabn<CR>
