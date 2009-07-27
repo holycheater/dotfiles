@@ -1,5 +1,6 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
+" vim:noet:ts=4:sw=4:
 set nocompatible
 
 " allow backspacing over everything in insert mode
@@ -69,3 +70,7 @@ set fileencodings=utf-8,cp1251,ucs-2,ucs-bom,latin1
 
 " disable the bell
 set vb t_vb=
+
+set listchars=tab:··,trail:»
+" set list
+
