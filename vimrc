@@ -64,5 +64,8 @@ set smarttab
 
 set tabpagemax=30
 
+set fileformats=unix,dos
+set fileencodings=utf-8,cp1251,ucs-2,ucs-bom,latin1
+
 " disable the bell
 set vb t_vb=
