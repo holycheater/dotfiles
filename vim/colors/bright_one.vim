@@ -6,8 +6,7 @@
 " Magenta: #dc22dc
 " Cyan:    #5122dc
 " White:   #ffffff
-
-" ********************************************************************************
+" *************************************************************************
 set background=light
 hi clear
 
@@ -22,7 +21,7 @@ hi Normal           guifg=#111111  guibg=#ffffff  gui=NONE
 hi NonText          guifg=#777777  guibg=#ffffff  gui=NONE
 
 hi Cursor           guifg=#ffffff  guibg=#000000  gui=NONE
-hi LineNr           guifg=#3d3d3d  guibg=#000000  gui=NONE
+hi LineNr           guifg=#777777  guibg=#eeeeee  gui=NONE
 
 hi VertSplit        guifg=#eeeeee  guibg=#aaaaaa  gui=NONE
 hi StatusLine       guifg=#ffffff  guibg=#418dd4  gui=italic
@@ -34,8 +33,9 @@ hi Visual           guifg=#ffffff  guibg=#418dd4  gui=NONE
 
 hi SpecialKey       guifg=#808080  guibg=#eeeeee  gui=NONE
 
-hi WildMenu         guifg=green    guibg=yellow   gui=NONE
-hi PmenuSbar        guifg=black    guibg=white    gui=NONE
+hi WildMenu         guifg=#ffffff  guibg=#72d441  gui=NONE
+hi PmenuSbar        guifg=NONE     guibg=#444444  gui=NONE
+hi PmenuThumb       guifg=#ffffff  guibg=NONE     gui=NONE
 
 hi Error            guifg=NONE     guibg=NONE     gui=undercurl  guisp=#ff0000
 hi ErrorMsg         guifg=white    guibg=#dc2f22  gui=bold
