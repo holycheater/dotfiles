@@ -38,15 +38,15 @@ hi PmenuSbar        guifg=NONE     guibg=#444444  gui=NONE
 hi PmenuThumb       guifg=#ffffff  guibg=NONE     gui=NONE
 
 hi Error            guifg=NONE     guibg=NONE     gui=undercurl  guisp=#ff0000
-hi ErrorMsg         guifg=white    guibg=#dc2f22  gui=bold
-hi WarningMsg       guifg=white    guibg=#ffb900  gui=bold
+hi ErrorMsg         guifg=#ffffff  guibg=#dc2f22  gui=bold
+hi WarningMsg       guifg=#ffffff  guibg=#ffb900  gui=bold
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=#ffffff  guibg=#b49dff  gui=bold
+hi ModeMsg          guifg=#ffffff  guibg=#418dd4  gui=bold
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     guifg=NONE     guibg=#121212  gui=NONE
-  hi CursorColumn   guifg=NONE     guibg=#121212  gui=NONE
+  hi CursorLine     guifg=NONE     guibg=NONE     gui=inverse
+  hi CursorColumn   guifg=NONE     guibg=NONE     gui=inverse
   hi MatchParen     guifg=#ff0000  guibg=NONE     gui=bold
   hi Pmenu          guifg=#f6f3e8  guibg=#444444  gui=NONE
   hi PmenuSel       guifg=#000000  guibg=#cae682  gui=NONE
@@ -54,17 +54,15 @@ if version >= 700 " Vim 7.x specific colors
 endif
 
 " Syntax highlighting
+hi Constant         guifg=#31c356  guibg=NONE     gui=bold
 hi Comment          guifg=#4c4c4c  guibg=NONE     gui=NONE
-hi String           guifg=#34d200  guibg=NONE     gui=NONE
 hi Number           guifg=#dc22dc  guibg=NONE     gui=NONE
+hi String           guifg=#34d200  guibg=NONE     gui=NONE
+hi Todo             guifg=#ff0000  guibg=#b4eeb4  gui=none
 
 hi Keyword          guifg=#2285dc  guibg=NONE     gui=NONE
 hi PreProc          guifg=#2285dc  guibg=NONE     gui=NONE
 hi Conditional      guifg=#2c7ccc  guibg=NONE     gui=NONE
-
-hi Todo             guifg=#000000  guibg=#ffff37  gui=bold
-hi Todo             guifg=#ff0000  guibg=#b4eeb4  gui=none
-hi Constant         guifg=#31c356  guibg=NONE     gui=bold
 
 hi Identifier       guifg=#00abe5  guibg=NONE     gui=NONE
 hi Function         guifg=#f09d50  guibg=NONE     gui=NONE
