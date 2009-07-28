@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-" vim:noet:ts=4:sw=4:
 set nocompatible
+" vim:noet:ts=4:sw=4:
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -29,31 +29,42 @@ endif
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+	" Enable file type detection.
+	" Use the default filetype settings, so that mail gets 'tw' set to 72,
+	" 'cindent' is on in C files, etc.
+	" Also load indent files, to automatically do language-dependent indenting.
+	filetype plugin indent on
 
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
+	" Put these in an autocmd group, so that we can delete them easily.
+	augroup vimrcEx
+	au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+	" For all text files set 'textwidth' to 78 characters.
+	autocmd FileType text setlocal textwidth=78
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-	\ if line("'\"") > 0 && line("'\"") <= line("$") |
-	\	exe "normal g`\"" |
-	\ endif
+	" When editing a file, always jump to the last known cursor position.
+	" Don't do it when the position is invalid or when inside an event handler
+	" (happens when dropping a file on gvim).
+	autocmd BufReadPost *
+		\ if line("'\"") > 0 && line("'\"") <= line("$") |
+		\	exe "normal g`\"" |
+		\ endif
+	augroup END
 
-  augroup END
+	augroup content
+		autocmd BufNewFile *.php
+					\ 0put = '?>'|
+					\ 0put = '// vim: sw=4:ts=4:et:sta:'|
+					\ 0put = '<?php'|
+					\ set sw=4 ts=4 et smarttab nowrap |
+					\ norm G
+		autocmd BufNewFile *.sh
+					\ 0put = '#!/bin/sh'|
+					\ norm G
+	augroup END
 
 else
-  set autoindent		" always set autoindenting on
+	set autoindent " always set autoindenting on
 endif " has("autocmd")
 
 colorscheme ir_black
@@ -66,11 +77,10 @@ set smarttab
 set tabpagemax=30
 
 set fileformats=unix,dos
-set fileencodings=utf-8,cp1251,ucs-2,ucs-bom,latin1
+set fileencodings=utf-8,cp1251,latin1
 
 " disable the bell
 set vb t_vb=
 
 set listchars=tab:··,trail:»
-" set list
-
+set wildmenu

@@ -1,7 +1,7 @@
 " vim:noet:ts=4:sw=4:
-set ch=2		" Make command line two lines high
+set ch=2	  " Make command line two lines high
 
-set mousehide		" Hide the mouse when typing text
+set mousehide " Hide the mouse when typing text
 
 " Make shift-insert work like in Xterm
 map <S-Insert> <MiddleMouse>
@@ -18,24 +18,24 @@ endif
 if has("gui_gtk")
 	set guifont=Monaco\ 12
 	win 80 35
-	colorscheme satori
+	colorscheme bright_one
 endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
 	win 80 45
 	colorscheme ir_dark
 endif
-colo bright_one
 
 " remove toolbar & menu
 set guioptions-=T
 set guioptions-=m
 
-nmap <C-M> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif<CR>
+nmap <F11> :if &guioptions=~'m' \| set guioptions-=m \| else \| set guioptions+=m \| endif <cr>
 
-map <C-Tab> :tabn<CR>
-map <C-S-Tab> :tabp<CR>
-map <S-Tab> :tabp<CR>
+nmap <C-Tab> :tabn<cr>
+nmap <C-S-Tab> :tabp<cr>
+imap <C-Tab> <esc><c-tab>i
+imap <C-S-Tab> <esc><c-s-tab>i
 
 " copy paste
 vmap <C-C> "+y
