@@ -25,7 +25,7 @@ if has("gui_mac") || has("gui_macvim")
 	win 80 45
 	colorscheme ir_dark
 endif
-colo ir_dark
+colo bright_one
 
 " remove toolbar & menu
 set guioptions-=T
