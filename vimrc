@@ -74,7 +74,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
-set tabpagemax=30
+set tabpagemax=150
 
 set fileformats=unix,dos
 set fileencodings=utf-8,cp1251,latin1
@@ -84,3 +84,4 @@ set vb t_vb=
 
 set listchars=tab:··,trail:»
 set wildmenu
+set winminheight=0
