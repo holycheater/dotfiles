@@ -12,7 +12,7 @@ BINDMOUNTS="${CCACHE_DIR}"
 [ -z $DIST ] && DIST=`lsb_release -cs`
 
 case "$DIST" in
-	hardy|intrepid|jaunty) # ubuntu specific
+	hardy|intrepid|jaunty|karmic|lucid) # ubuntu specific
 		MIRRORSITE="http://archive.ubuntu.com/ubuntu/"
 		COMPONENTS="main restricted universe multiverse"
 		#OTHERMIRROR="deb http://ppa.launchpad.net/holy.cheater/ubuntu $DIST main"
