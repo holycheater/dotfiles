@@ -18,7 +18,7 @@ endif
 if has("gui_gtk")
 	set guifont=Monaco\ 12
 	win 80 35
-	colorscheme bright_one
+	colorscheme ir_dark
 endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
