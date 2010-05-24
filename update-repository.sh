@@ -1,7 +1,7 @@
 #!/bin/sh
 # vim:noet:sw=4:ts=4
 
-FILES="gvimrc vimrc bash_profile dircolors zshrc screenrc Xdefaults pbuilderrc vim"
+FILES="gvimrc vimrc bash_profile dircolors zshrc screenrc Xresources pbuilderrc vim"
 
 for f in $FILES; do
 	fullpath="${HOME}/.${f}"
