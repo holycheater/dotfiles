@@ -22,6 +22,7 @@ if has("gui_gtk")
 endif
 if has("gui_mac") || has("gui_macvim")
 	set guifont=Monaco:h12
+	set transparency=2
 	win 80 45
 	colorscheme ir_dark
 endif

@@ -53,7 +53,6 @@ if has("autocmd")
 
 	augroup content
 		autocmd BufNewFile *.php
-					\ 0put = '?>'|
 					\ 0put = '// vim: sw=4:ts=4:et:sta:'|
 					\ 0put = '<?php'|
 					\ set sw=4 ts=4 et smarttab nowrap |
@@ -69,10 +68,11 @@ endif " has("autocmd")
 
 colorscheme ir_black
 
-set tabstop=8
+set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+set list
 
 set tabpagemax=150
 
